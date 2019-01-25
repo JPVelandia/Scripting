@@ -12,19 +12,21 @@ namespace ConsoleApp10
         {
             Console.WriteLine("Resolvedor de Triángulos1");
 
-            Console.WriteLine("Ingrese z");
-            double z = double.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese t");
+            double t = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Ingrese y");
-            double y = double.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese a");
+            double a = double.Parse(Console.ReadLine());
 
-            double t = Math.Round(Math.Sqrt((y * y) + (z * z)),2);
+            double y = t * Math.Sin(a);
+            double z = t * Math.Cos(a);
 
-            double c = Math.Round(Math.Asin(z / t) * (180 / Math.PI),2);
 
-            double a = 180 - 90 - c;
+            
 
-            Console.WriteLine("La hipotenusa mide, {0} \nEl lado c mide {1} \nEl lado a mide {2}", t,c,a);
+            double c = 180 - 90 - a;
+
+            Console.WriteLine("El lado y mide {0} \nEl lado z mide {2} \nEl ángulo c mide {2}", y,z,c);
             
 
 
